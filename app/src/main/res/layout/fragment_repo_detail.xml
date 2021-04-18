@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="itemData"
+            type="com.example.dsgc.model.Item" />
+    </data>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:text="@{itemData.venue.name}"
+                android:textSize="@dimen/_20sp" />
+            <ImageView
+                android:id="@+id/item_avatar"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"/>
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:text="@{itemData.datetime_utc}"
+                android:textSize="@dimen/_20sp" />
+            <TextView
+                android:id="@+id/item_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:text="@{itemData.venue.display_location}"
+                android:textSize="@dimen/_16sp" />
+
+        </LinearLayout>
+
+</layout>
